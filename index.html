@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <p>
+
+    </p>
+
+
+
+<script>  
+   function computerPlay(){
+       let num = Math.floor(Math.random()*3);
+       if (num==0){
+           return "rock";
+       }else if (num==1){
+           return "paper";
+       }else return "scissors";
+   }
+computerPlay();
+console.log(computerPlay());    //check 1
+
+   function player(){
+       return window.prompt("Choose between rock paper and scissors");
+   }
+
+   function playerRound(playerSelection,computerSelection){
+       if ((playerSelection==="rock")&&(computerSelection==="rock")){
+           return "It's a tie!";
+       }else if ((playerSelection==="paper")&&(computerSelection==="paper")){
+           return "It's a tie!";
+       }else if ((playerSelection==="scissors")&&(computerSelection==="scissors")){
+           return "It's a tie!";
+       }else if ((playerSelection==="rock")&&(computerSelection==="paper")){
+           return "You lose!";
+       }else if ((playerSelection==="rock")&&(computerSelection==="scissors")){
+           return "You win!";
+       }else if ((playerSelection==="paper")&&(computerSelection==="rock")){
+           return "You win!";
+       }else if ((playerSelection==="paper")&&(computerSelection==="scissors")){
+           return "You lose!";
+       }else if ((playerSelection==="scissors")&&(computerSelection==="paper")){
+           return "You win!";
+       }else if ((playerSelection==="scissors")&&(computerSelection==="rock")){
+           return "You lose!";
+       }
+   }
+
+   const playerSelection = player();
+   const computerSelection= computerPlay();
+   console.log(playerRound(playerSelection,computerSelection));
+</script>
+
+</body>
+</html>
