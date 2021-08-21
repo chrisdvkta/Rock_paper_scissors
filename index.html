@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock,paper and scissors</title>
 </head>
 <body>
+    <!-- *Console* -->
+    <!-- <input type ="button" id ="btn" value ="rock" class ="btn" onclick="game()"></input>
+    <input type = "button" id ="btn" value ="paper" class ="btn" onclick="game()"></input>
+    <input type ="button" id= "btn" value ="paper" class ="btn" onclick="game()"></input> -->
+   
+    <!-- *UI version* -->
+    <div id = 'containter'>
+    
+        <div id= 'btns'>
+            <button id="btn">Rock</button>
+            <button id='btn'>Paper</button> 
+            <button id='btn'>scissors</button>
+        </div>
+        
+        <div id= "scorecard">
+            <p></p>
+        </div>
+        
+        
 
 
-    <p>
-
-    </p>
 
 
+    </div>
 
-<script>  
+
+</body>
+</html>
+<script src= 'app.js' defer></script>
+
+
+<!-- <script> 
+function game(){ 
    function computerPlay(){
        let num = Math.floor(Math.random()*3);
        if (num==0){
@@ -28,7 +52,7 @@ computerPlay();
 console.log(computerPlay());    //check 1
 
    function player(){
-       return window.prompt("Choose between rock paper and scissors");
+       return document.querySelector("button .btn")
    }
 
    function playerRound(playerSelection,computerSelection){
@@ -56,7 +80,9 @@ console.log(computerPlay());    //check 1
    const playerSelection = player();
    const computerSelection= computerPlay();
    console.log(playerRound(playerSelection,computerSelection));
-</script>
+}
+ 
+ </script> -->
 
 </body>
 </html>
