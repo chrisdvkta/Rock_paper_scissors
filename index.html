@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock,paper and scissors</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <!-- *Console* -->
@@ -13,21 +15,36 @@
     <input type ="button" id= "btn" value ="paper" class ="btn" onclick="game()"></input> -->
    
     <!-- *UI version* -->
-    <div id = 'containter'>
-    
-        <div id= 'btns'>
-            <button id="btn">Rock</button>
-            <button id='btn'>Paper</button> 
-            <button id='btn'>scissors</button>
+    <div class = 'container'>
+        
+        <div id = "header" class="title">
+            <h1>Rock paper Scissors</h1>
+            <h2>Can you beat the game?</h2>
+        </div>
+
+        <div id= 'btns' class= "btns">
+            <button id = "btn">Rock</button>
+            <button id = 'btn'>Paper</button> 
+            <button id = 'btn'>scissors</button>
         </div>
         
-        <div id= "scorecard">
-            <p></p>
+        <div class="labels">
+            <span id="playerLabel">Player scores</span>
+            <span id="compLabel">Computer scores</span>
+          </div>
+
+        <div class="scores">
+            <div id="playerScore"></div>
+            <div id="computerScore"></div>
         </div>
-        
-        
 
-
+        <div><span id='resultLabel'>Result</span></div>
+        
+        <div id="roundResults"></div>
+        
+        <div>
+            <button id="reset">Play Again!</button>
+          </div>
 
 
     </div>
@@ -35,7 +52,7 @@
 
 </body>
 </html>
-<script src= 'app.js' defer></script>
+<script src= 'app.js'></script>
 
 
 <!-- <script> 
