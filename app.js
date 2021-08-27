@@ -8,72 +8,73 @@
 //
 //
 //
-const res = document.querySelector('roundResults');
-const scorecard= document.querySelectorAll('.scores');
-const btn = document.querySelectorAll('btns');
-const comp= document.querySelector('#compScore');
-const player= document.querySelector('#playerScore');
+const res = document.querySelector('#roundResults');
+const btn = document.querySelectorAll('button');
+const comp= document.querySelector('#computerScore');
+const ply= document.querySelector('#playerScore');
 const reset = document.querySelector('#reset');
-
 
 
 reset.addEventListener('click',()=>{
     window.location.reload();
-})
+});
 
+
+
+btn.forEach(button =>{
+     button.addEventListener('click',getValue)
+
+});
 
 let compScore=0;
 let playerScore=0;
+let playerChoice;
 
-
-
-
-function game(){
-    
-        
-        function computerPlay(){
+    function computerPlay(){
             let opt= ['Rock','Paper','Scissors'];
-            return opt[Math.floor(Math.random()*3)];
-            
+            return opt[Math.floor(Math.random()*3)];      
         }
         console.log(computerPlay()); //check 1 
 
         function playerRound(playerSelection,computerSelection){
             if (playerSelection===computerSelection){
-                ++compScore;
-                ++playerScore;
+                comp.textContent= ++compScore;
+                ply.textContent=  ++playerScore;
             }else if (((playerSelection=="Rock") && (computerSelection=="Scissors"))||
                       ((playerSelection=="Paper") && (computerSelection=="Rock")) ||
                       ((playerSelection=="Scissors") && (computerSelection=="Paper"))){
-                         ++playerScore;
-            }else ++compScore;
-           
+                        ply.textContent= ++playerScore;
+            }else {comp.textContent= ++compScore};
+            console.log(compScore,playerScore);
+            
+            if((compScore==5)||(playerScore==5)){
+                verdict();
+            }
         }
-    const playerSelection = 'rock';
-    const computerSelection= computerPlay();
-   
-    playerRound(playerSelection,computerSelection);  
-
-
-
-    
         
-}
+    
 
-while ((compScore!==5)&&(playerScore!==5)){
-    game();
-}
-
-console.log(compScore,playerScore);         //check 2
-console.log(verdict());
-
-
+// console.log(compScore,playerScore);         //check 2
 function verdict(){
     if (compScore<playerScore){
-        res.textContent = "You win!"
+   res.textContent = "You win!";
     } else if(playerScore<compScore){
-        res.textContent= "You Lose!";
+     res.textContent= "You Lose!";
     }else res.textContent= "It's a tie";
+    console.log('hello');
+
+    btn.forEach(button=>{
+        button.removeEventListener('click',getValue);
+    })
+    
 }
+
+function getValue(e){
+    let playerSelection = e.target.id;
+    playerChoice= e.target.textContent;
+    playerRound(playerSelection,computerPlay());
+}
+
+
 
 

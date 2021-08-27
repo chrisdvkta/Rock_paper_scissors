@@ -30,20 +30,28 @@ html{
 }
 
 
-.scores{
+#scores{
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-bottom:15px;
+    text-align:center;
 
 }
 
 
-.scores div{
+#scores div{
+    display:flex;
+    justify-content: center;
+    align-items:center;
     width:200px;
     height:100px;
     margin: 5px 20px;
     border: 5px solid khaki;
+    font-weight: 700;
+    font-size: 3.5rem;
+    font-family:fantasy;
+
 }
 
 #roundResults{
@@ -61,12 +69,12 @@ html{
 
 /* buttons */
 
-.btns{
+#btns{
     margin:20px;
     margin-bottom:50px;
 }
 
-.btns button{
+#btns button{
     margin: 0 20px;
     width:120px;
     height:75px;
