@@ -4,102 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock,paper and scissors</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <title>Rock-paper-scissors</title>
+    <link href= "style.css" rel= "stylesheet">
+    <script src = "app.js"></script>
 </head>
 <body>
-    <!-- *Console* -->
-    <!-- <input type ="button" id ="btn" value ="rock" class ="btn" onclick="game()"></input>
-    <input type = "button" id ="btn" value ="paper" class ="btn" onclick="game()"></input>
-    <input type ="button" id= "btn" value ="paper" class ="btn" onclick="game()"></input> -->
-   
-    <!-- *UI version* -->
-    <div class = 'container'>
-        
-        <div id = "header" class="title">
-            <h1>Rock paper Scissors</h1>
-            <h2>Can you beat the game?</h2>
+    <div class = "container">    
+        <div class="header">
+            <h1>Rock-paper-scissors</h1>
         </div>
-
-        <div id= 'btns'>
-            <button id = "Rock">Rock</button>
-            <button id = 'Paper'>Paper</button> 
-            <button id = 'Scissors'>scissors</button>
+    
+    <div class = "main">
+        <h2>Choose any one!</h2>
+        <div class ="btn">
+            <input type="submit" value= "Rock">
+            <input type="submit" value= "Paper">
+            <input type="submit" value= "Scissors">
+        </div> 
+        <div class ="score-card">
+            <div>
+                <h3>Player</h3>
+            </div>
+            <div>
+                <h3>Computer</h3>
+            </div>
         </div>
-        
-        <div class="labels">
-            <span id="playerLabel">Player scores</span>
-            <span id="compLabel">Computer scores</span>
-          </div>
+        <div clas ="verdict">
 
-        <div id="scores">
-            <div id="playerScore"></div>
-            <div id="computerScore"></div>
         </div>
-
-        <div><span id='resultLabel'>Result</span></div>
-        
-        <div id="roundResults"></div>
-        
-        <div>
-            <button id="reset">Play Again!</button>
-          </div>
-
-
     </div>
-
-
-</body>
-</html>
-<script src= 'app.js'></script>
-
-
-<!-- <script> 
-function game(){ 
-   function computerPlay(){
-       let num = Math.floor(Math.random()*3);
-       if (num==0){
-           return "rock";
-       }else if (num==1){
-           return "paper";
-       }else return "scissors";
-   }
-computerPlay();
-console.log(computerPlay());    //check 1
-
-   function player(){
-       return document.querySelector("button .btn")
-   }
-
-   function playerRound(playerSelection,computerSelection){
-       if ((playerSelection==="rock")&&(computerSelection==="rock")){
-           return "It's a tie!";
-       }else if ((playerSelection==="paper")&&(computerSelection==="paper")){
-           return "It's a tie!";
-       }else if ((playerSelection==="scissors")&&(computerSelection==="scissors")){
-           return "It's a tie!";
-       }else if ((playerSelection==="rock")&&(computerSelection==="paper")){
-           return "You lose!";
-       }else if ((playerSelection==="rock")&&(computerSelection==="scissors")){
-           return "You win!";
-       }else if ((playerSelection==="paper")&&(computerSelection==="rock")){
-           return "You win!";
-       }else if ((playerSelection==="paper")&&(computerSelection==="scissors")){
-           return "You lose!";
-       }else if ((playerSelection==="scissors")&&(computerSelection==="paper")){
-           return "You win!";
-       }else if ((playerSelection==="scissors")&&(computerSelection==="rock")){
-           return "You lose!";
-       }
-   }
-
-   const playerSelection = player();
-   const computerSelection= computerPlay();
-   console.log(playerRound(playerSelection,computerSelection));
-}
- 
- </script> -->
+  </div>  
+    <footer>
+        Copyright &copy; Krish Devkota <a href= "https://github.com/chrisdvkta" target="_blank">Github</a>
+    </footer>
 
 </body>
 </html>
