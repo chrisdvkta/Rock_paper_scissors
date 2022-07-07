@@ -18,13 +18,13 @@ let compCount = 0 ; let playerCount =0;
 game();
 
 function computerPlay () {
-    let optSelect = Math.floor(Math.random()*3);
+    let numSelect = Math.floor(Math.random()*3);
     console.log(optSelect);
     let result;
 
-    if (optSelect ==1){
+    if (numSelect ==1){
         result = "rock";
-    }else if (optSelect==2){
+    }else if (numSelect==2){
         result = "paper"
     }else {result = "scissors"}
     console.log(result);
@@ -43,7 +43,7 @@ function playRound(playerSelection,computerSelection){
         }
 }
 
-function final_verdict(){
+function getVerdict(){
     let verdict;
 
     if (compCount>playerCount){
@@ -63,7 +63,7 @@ function game () {
         console.log(playRound(playerSelection,computerSelection));
         console.log(playerCount,compCount);
     }
-    console.log(final_verdict());
+    console.log(getVerdict());
 }
 
 
