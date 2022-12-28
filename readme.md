@@ -1,2 +1,3 @@
 <Strong>ROCK PAPER AND SCISSORS</Strong>
-<p>UI game, can you beat the ultimate core?</p>
+<p>You're playing against a 600 core cpu.</p>
+<p>Future updates : Add round result with cpu's entry and clear everything without reload</p>
